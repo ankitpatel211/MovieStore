@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div ng-controller="EditController">
+        <form ng-show="isEditable()">
+            <fieldset>
+                <div class="form-group">
+                    <label for="title">
+                        Title
+                    </label>
+                    <input id="title" type="text"
+                           ng-model="edit.movie.Title" required 
+                           class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="releaseYear">
+                        Release Year
+                    </label>
+                    <input id="releaseYear" type="number"
+                           ng-model="edit.movie.ReleaseYear" required
+                           min="1900" max="2030"
+                           class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="runtime">
+                        Length
+                    </label>
+                    <input id="runtime" type="number"
+                           ng-model="edit.movie.Runtime" required
+                           min="0" max="500"
+                           class="form-control" />
+                </div>
+                <div growl></div>
+                <button class="btn btn-default" 
+                        ng-click="save()">
+                    Save
+                </button>
+                <button class="btn btn-default"
+                        ng-click="cancel()">
+                    Cancel
+                </button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

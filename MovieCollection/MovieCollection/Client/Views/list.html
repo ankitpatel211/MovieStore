@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div ng-controller="ListController">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td><strong>Title</strong></td>
+                    <td><strong>Release Year</strong></td>
+                    <td><strong>Length(Minutes)</strong></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="mc in movieCollections">
+                    <td>
+                        {{mc.Title}}
+                    </td>
+                    <td>
+                        {{mc.ReleaseYear}}
+                    </td>
+                    <td>
+                        {{mc.Runtime}}
+                    </td>
+                    <td>
+                        <a class="btn btn-default" href="#/details/{{mc.Id}}">Details</a>
+                        <button class="btn btn-default" ng-click="delete(mc)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-default" ng-click="create()">Create</button>
+        <div ng-include="'/Client/Views/edit.html'"></div>
+    </div>
+</body>
+</html>

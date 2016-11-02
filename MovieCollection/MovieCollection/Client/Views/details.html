@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+  <div ng-controller="DetailsController">
+      <h2>{{m.Title}}</h2>
+      <div>Release in {{m.ReleaseYear}}.</div>
+      <div>{{m.Runtime}} minutes long.</div>
+      <br />
+      <button class="btn btn-default" ng-click="edit()">Edit</button>
+      <div ng-include="'/Client/Views/edit.html'"></div>
+  </div>
+</body>
+</html>
