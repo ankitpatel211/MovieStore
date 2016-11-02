@@ -1,0 +1,13 @@
+﻿
+@section scripts{
+    @Scripts.Render("~/bundles/angular")
+    <script src="~/Client/Scripts/atTheMovies.js"></script>
+    <script src="~/Client/Scripts/ListController.js"></script>
+    <script src="~/Client/Scripts/DetailsController.js"></script>
+    <script src="~/Client/Scripts/MoviesController.js"></script>
+    <script src="~/Client/Scripts/EditController.js"></script>
+   
+}
+<div data-ng-app="atTheMovies">
+    <ng-view></ng-view>
+</div>
